@@ -104,13 +104,12 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': os.environ.get('DJANGO_MYSQL_DATABASE') or 'djangoblog',
         'USER': os.environ.get('DJANGO_MYSQL_USER') or 'root',
-        'PASSWORD': os.environ.get('DJANGO_MYSQL_PASSWORD') or 'djangoblog_123',
+        'PASSWORD': os.environ.get('DJANGO_MYSQL_PASSWORD') or '7wtB6{W?f(vxtVkM',
         'HOST': os.environ.get('DJANGO_MYSQL_HOST') or '127.0.0.1',
-        'PORT': int(
-            os.environ.get('DJANGO_MYSQL_PORT') or 3306),
-        'OPTIONS': {
-            'charset': 'utf8mb4'},
-    }}
+        'PORT': int(os.environ.get('DJANGO_MYSQL_PORT') or 3306),
+        'OPTIONS': {'charset': 'utf8mb4'},
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -195,7 +194,7 @@ CACHES = {
 
 SITE_ID = 1
 BAIDU_NOTIFY_URL = os.environ.get('DJANGO_BAIDU_NOTIFY_URL') \
-    or 'http://data.zz.baidu.com/urls?site=https://www.lylinux.net&token=1uAOGrMsUm5syDGn'
+                   or 'http://data.zz.baidu.com/urls?site=https://www.lylinux.net&token=1uAOGrMsUm5syDGn'
 
 # Email:
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
